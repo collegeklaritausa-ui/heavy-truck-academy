@@ -1,0 +1,25 @@
+{
+  "query": "SHOW TABLES;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4ZYv7AUfi3ZJDrk.root --database HqXgdQemsZSRWk8xPDrfAa --execute SHOW TABLES;",
+  "rows": [
+    {
+      "Tables_in_HqXgdQemsZSRWk8xPDrfAa": "__drizzle_migrations"
+    },
+    {
+      "Tables_in_HqXgdQemsZSRWk8xPDrfAa": "certifications"
+    },
+    {
+      "Tables_in_HqXgdQemsZSRWk8xPDrfAa": "course_categories"
+    },
+    {
+      "Tables_in_HqXgdQemsZSRWk8xPDrfAa": "courses"
+    },
+    {
+      "Tables_in_HqXgdQemsZSRWk8xPDrfAa": "users"
+    }
+  ],
+  "messages": [],
+  "stdout": "Tables_in_HqXgdQemsZSRWk8xPDrfAa\n__drizzle_migrations\ncertifications\ncourse_categories\ncourses\nusers\n",
+  "stderr": "",
+  "execution_time_ms": 107
+}
