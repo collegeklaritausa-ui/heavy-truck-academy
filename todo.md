@@ -65,3 +65,13 @@
 - [x] Seed knowledge base articles (200+ articles)
 - [x] Seed license requirements by country (18 countries)
 - [x] Seed marketplace listings (300+ listings)
+
+
+## Mechanics Lessons Module (NEW)
+- [x] Create mechanics_lessons table
+- [x] Create mechanics_lesson_categories table
+- [x] Create user_lesson_progress table
+- [x] Generate 5000+ mechanics lessons (34 categories, 5000 lessons)
+- [x] Create Mechanics Lessons page UI
+- [x] Add mechanics router to tRPC API
+- [x] Push updates to GitHub

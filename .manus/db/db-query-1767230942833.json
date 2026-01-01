@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE IF NOT EXISTS `user_mechanics_lesson_progress` (\n  `id` int AUTO_INCREMENT NOT NULL,\n  `userId` int,\n  `lessonId` int,\n  `progressPercentage` int DEFAULT 0,\n  `isCompleted` boolean DEFAULT false,\n  `completedAt` timestamp,\n  `watchedDurationSeconds` int DEFAULT 0,\n  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,\n  CONSTRAINT `user_mechanics_lesson_progress_id` PRIMARY KEY(`id`)\n);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4ZYv7AUfi3ZJDrk.root --database HqXgdQemsZSRWk8xPDrfAa --execute CREATE TABLE IF NOT EXISTS `user_mechanics_lesson_progress` (\n  `id` int AUTO_INCREMENT NOT NULL,\n  `userId` int,\n  `lessonId` int,\n  `progressPercentage` int DEFAULT 0,\n  `isCompleted` boolean DEFAULT false,\n  `completedAt` timestamp,\n  `watchedDurationSeconds` int DEFAULT 0,\n  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  `updatedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,\n  CONSTRAINT `user_mechanics_lesson_progress_id` PRIMARY KEY(`id`)\n);",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 172
+}

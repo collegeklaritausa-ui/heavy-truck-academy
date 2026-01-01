@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE IF NOT EXISTS `mechanics_lesson_categories` (\n  `id` int AUTO_INCREMENT NOT NULL,\n  `nameEn` varchar(255) NOT NULL,\n  `nameDe` varchar(255),\n  `nameEs` varchar(255),\n  `nameFr` varchar(255),\n  `nameAr` varchar(255),\n  `slug` varchar(255) NOT NULL,\n  `descriptionEn` text,\n  `icon` varchar(100),\n  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  CONSTRAINT `mechanics_lesson_categories_id` PRIMARY KEY(`id`),\n  CONSTRAINT `mechanics_lesson_categories_slug_unique` UNIQUE(`slug`)\n);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 4ZYv7AUfi3ZJDrk.root --database HqXgdQemsZSRWk8xPDrfAa --execute CREATE TABLE IF NOT EXISTS `mechanics_lesson_categories` (\n  `id` int AUTO_INCREMENT NOT NULL,\n  `nameEn` varchar(255) NOT NULL,\n  `nameDe` varchar(255),\n  `nameEs` varchar(255),\n  `nameFr` varchar(255),\n  `nameAr` varchar(255),\n  `slug` varchar(255) NOT NULL,\n  `descriptionEn` text,\n  `icon` varchar(100),\n  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  CONSTRAINT `mechanics_lesson_categories_id` PRIMARY KEY(`id`),\n  CONSTRAINT `mechanics_lesson_categories_slug_unique` UNIQUE(`slug`)\n);",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 275
+}

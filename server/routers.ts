@@ -1,4 +1,5 @@
 import { COOKIE_NAME } from "@shared/const";
+import type { TrpcContext } from "./_core/context";
 import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, protectedProcedure, router } from "./_core/trpc";
@@ -149,6 +150,59 @@ export const appRouter = router({
       }),
   }),
 
+  // Mechanics Lessons Module
+  mechanics: router({
+    getLessons: publicProcedure
+      .input(z.object({
+        category: z.string().optional(),
+        difficulty: z.enum(["beginner", "intermediate", "advanced", "expert"]).optional(),
+        search: z.string().optional(),
+        limit: z.number().min(1).max(100).default(20),
+        offset: z.number().min(0).default(0),
+      }).optional())
+      .query(async ({ input }) => {
+        // Mock implementation - returns sample lessons
+        return [
+          {
+            id: 1,
+            titleEn: "Complete Diesel Engine Overhaul",
+            descriptionEn: "Professional mechanics lesson on complete diesel engine overhaul",
+            durationMinutes: 120,
+            manufacturer: "Volvo",
+            vehicleType: "Heavy Truck",
+            difficulty: "advanced",
+            rating: 4.8,
+            ratingCount: 245,
+            viewCount: 5432,
+          },
+          {
+            id: 2,
+            titleEn: "Air Brake System Service",
+            descriptionEn: "Learn proper air brake system maintenance and repair",
+            durationMinutes: 90,
+            manufacturer: "Scania",
+            vehicleType: "Semi-Truck",
+            difficulty: "intermediate",
+            rating: 4.6,
+            ratingCount: 189,
+            viewCount: 3821,
+          },
+          {
+            id: 3,
+            titleEn: "Transmission Rebuild Procedures",
+            descriptionEn: "Step-by-step transmission rebuild guide",
+            durationMinutes: 150,
+            manufacturer: "MAN",
+            vehicleType: "Heavy Truck",
+            difficulty: "expert",
+            rating: 4.9,
+            ratingCount: 312,
+            viewCount: 7654,
+          },
+        ];
+      }),
+  }),
+
   // Driving Schools Module
   schools: router({
     getSchools: publicProcedure
@@ -193,3 +247,17 @@ export const appRouter = router({
 });
 
 export type AppRouter = typeof appRouter;
+
+// Type export for mechanics lessons
+export interface MechanicsLesson {
+  id: number;
+  titleEn: string;
+  descriptionEn: string;
+  durationMinutes: number;
+  manufacturer: string;
+  vehicleType: string;
+  difficulty: "beginner" | "intermediate" | "advanced" | "expert";
+  rating: number;
+  ratingCount: number;
+  viewCount: number;
+}
